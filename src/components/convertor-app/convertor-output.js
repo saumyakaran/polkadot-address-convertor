@@ -7,10 +7,9 @@ import {
   useColorMode,
 } from "@chakra-ui/react"
 import React, { useState } from "react"
-import copy from "copy-to-clipboard"
 
 const ConvertorOutput = ({ convertedId }) => {
-  const { colorMode, setColorMode } = useColorMode()
+  const { colorMode } = useColorMode()
   const copyToClipboard = str => {
     const el = document.createElement("textarea")
     el.value = str
