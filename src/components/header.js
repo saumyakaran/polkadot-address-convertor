@@ -1,35 +1,22 @@
-import { Link } from "gatsby"
+import { Flex, IconButton, useColorMode } from "@chakra-ui/react"
+import { CgDarkMode } from "@react-icons/all-files"
+
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = () => {
+  const { colorMode, toggleColorMode } = useColorMode()
+  return (
+    <header>
+      <Flex maxW="960px" mx="auto" justifyContent="flex-end" py={4}>
+        <IconButton
+          as={CgDarkMode}
+          onClick={toggleColorMode}
+        />
+      </Flex>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
