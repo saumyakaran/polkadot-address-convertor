@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#1A202C`,
         display: `minimal-ui`,
-        icon: `src/images/polka-analytics.png`, // This path is relative to the root of the site.
+        icon: `src/images/polka-analytics.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
